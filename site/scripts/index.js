@@ -12,10 +12,6 @@ var numList = [
     {
         name: 'three',
         value: 3
-    },
-    {
-        name: 'four',
-        value: 4
     }
 ];
 
