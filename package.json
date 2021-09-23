@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions/index.js",
+  "scripts": {
+    "serve": "cd ./functions && firebase serve --only functions,hosting",
+    "deploy": "firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopher-aube/portfolio.git"
+  },
+  "author": "christoper aube",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopher-aube/portfolio/issues"
+  },
+  "homepage": "https://github.com/christopher-aube/portfolio#readme"
+}
