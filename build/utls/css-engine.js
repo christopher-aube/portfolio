@@ -1,11 +1,28 @@
 const sass = require('sass');
 const diff = require('diff');
+const md5 = require('md5');
+const pathing = require('path');
 const fs = require('./file-system');
 const { print } = require('./messager');
 
-exports.compile = function compileCss(data) {
+function hasChanged(data, file) {
+    var oldFile = fs.readFileSync(data.destOld, 'utf8');
+    var changes = diff.diffCss(oldFile, file);
+    var updated = false;
+    
+    for (var i = 0, ii = changes.length; i < ii; i++) {
+
+        if (changes[i].added || changes[i].removed) {
+            updated = true;
+            break;
+        }
+    }
+    
+    return updated;
+}
+
+function compile(data, manifest) {
     var res, file;
-    var hasPath = false;
 
     try {
         print('compiling: ' + data.source);
@@ -34,64 +51,43 @@ exports.compile = function compileCss(data) {
     }
 
     try {
-        print('checking if file exists: ' + data.dest);
-        hasPath = fs.pathExistsSync(data.dest)
-    } catch (err) {
-        print('existance check failed: \n' + err.stack, 'error');
-        return false;
-    }
+        print('updating file: ' + data.dest);
+        var hasOld = data.hasOwnProperty('destOld');
+        var updated = hasOld ? hasChanged(data, file) : true;
 
-    if (!hasPath) {
-
-        try {
-            print('writting new file: ' + data.dest);
+        if (updated) {
+            print('writting changes to file: ' + data.dest);
             fs.outputFileSync(data.dest, file);
-        } catch (err) {
-            print('failed to write new file: \n' + err.stack, 'error');
-            return false;
-        }
 
-    } else {
-
-        try {
-            print('updating file: ' + data.dest);
-            var oldFile = fs.readFileSync(data.dest, 'utf8');
-            var changes = diff.diffCss(oldFile, file);
-            var updated = false;
-
-            for (var i = 0, ii = changes.length; i < ii; i++) {
-
-                if (changes[i].added || changes[i].removed) {
-                    updated = true;
-                    break;
-                }
+            if (hasOld) {
+                fs.removeSync(data.destOld);
             }
-            
-            if (updated) {
-                print('writting changes to file: ' + data.dest);
-                fs.outputFileSync(data.dest, file);
-            } else {
-                print('no changes detected for: ' + data.dest);
-            }
-        } catch (err) {
-            print('failed to update file: \n' + err.stack);
-            return false;
+
+            manifest.styles[data.name] = {
+                dest: data.dest,
+                url: '/public/styles/' + pathing.parse(data.dest).base
+            };
+        } else {
+            print('no changes detected for: ' + data.dest);
         }
+    } catch (err) {
+        print('failed to update file: \n' + err.stack);
+        return false;
     }
     
     return file;
 };
 
-exports.compileMany = function compileManyCss(files) {
+function compileMany(files, manifest) {
 
     for (var i = 0, ii = files.length; i < ii; i++) {
-        files[i].contents = exports.compile(files[i]);
+        files[i].contents = compile(files[i], manifest);
     }
 
     return files;
 };
 
-exports.build = function build() {
+exports.build = function build(manifest) {
     const stylesPaths = {
         main: {
             name: 'main',
@@ -99,19 +95,31 @@ exports.build = function build() {
             dest: 'functions/public/styles/main.css'
         }
     };
+    
+    if (!manifest.hasOwnProperty('styles')) {
+        manifest.styles = {};
+    }
 
     try {
+        let file;
         let files = [];
 
         for (style in stylesPaths) {
-            files.push({
+            stylesPaths[style].dest = stylesPaths[style].dest.replace(style, style + '.' + md5(stylesPaths[style].dest + '-' + new Date().valueOf()));
+            file = {
                 name: stylesPaths[style].name,
                 source: fs.createLocalPath(stylesPaths[style].source),
                 dest: fs.createLocalPath(stylesPaths[style].dest)
-            });
+            };
+            
+            if (manifest.styles.hasOwnProperty(file.name)) {
+                file.destOld = manifest.styles[file.name].dest;
+            }
+            
+            files.push(file);
         }
 
-        return exports.compileMany(files);
+        return compileMany(files, manifest);
     } catch (err) {
         print('failed to compile local files \n' + err.stack, 'error');
         return;
