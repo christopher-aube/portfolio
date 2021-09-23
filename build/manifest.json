@@ -4,5 +4,11 @@
             "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\main.d42bf5fc38a86fdb6fde0d2698962e24.css",
             "url": "/public/styles/main.d42bf5fc38a86fdb6fde0d2698962e24.css"
         }
+    },
+    "scripts": {
+        "main": {
+            "urls": "/public/scripts/main.6d0297d5b148d2e24dc2.js",
+            "dest": "P:\\personal\\portfolio\\functions\\public\\scripts\\main.6d0297d5b148d2e24dc2.js"
+        }
     }
 }

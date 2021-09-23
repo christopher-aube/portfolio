@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("index of one: ",-1)})();

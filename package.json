@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/christopher-aube/portfolio#readme",
   "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "colors": "^1.4.0",
     "diff": "^5.0.0",
     "fs-extra": "^10.0.0",

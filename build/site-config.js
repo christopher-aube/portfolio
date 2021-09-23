@@ -19,7 +19,7 @@ async function build() {
     }
     
     const cssRes = cssEninge.build(manifest);
-    // const scriptRes = await scriptEninge.build(manifest);
+    const scriptRes = await scriptEninge.build(manifest);
     // const viewRes = viewEninge.build(manifest, cssRes);
     fs.writeLocalFile(manifestPath, manifest);
 }

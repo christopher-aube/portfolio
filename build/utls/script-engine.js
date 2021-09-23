@@ -1,11 +1,16 @@
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const pathing = require('path');
+const fs = require('./file-system');
 
-exports.build = function build() {
+exports.build = function build(manifest) {
     let config = {
             entry: './site/scripts/index.js',
+            plugins: [
+                new CleanWebpackPlugin()
+            ],
             output: {
-                path: pathing.resolve(__dirname, 'functions/public/scripts/'),
+                path: pathing.resolve(__dirname, '../../functions/public/scripts/'),
                 filename: '[name].[contenthash].js'
             }
         };
@@ -13,9 +18,12 @@ exports.build = function build() {
     return new Promise(function (resolve, reject) {
 
         try {
-            let chunkname;
-            let manifest = {};
+            let chunkName, newDest;
             let compiler = webpack(config);
+
+            if (!manifest.hasOwnProperty('scripts')) {
+                manifest.scripts = {};
+            }
 
             compiler.run(function (err, stats) {
 
@@ -27,14 +35,15 @@ exports.build = function build() {
                 stats.toJson().assets.forEach(function (asset) {
                     chunkName = asset.chunkNames.length ? asset.chunkNames[0] : Object.keys(options.entry)[0];
                     
-                    if (!manifest.hasOwnProperty(chunkName)) {
-                        manifest[chunkName] = [];
+                    if (!manifest.scripts.hasOwnProperty(chunkName)) {
+                        manifest.scripts[chunkName] = {};
                     }
-    
-                    manifest[chunkName].push(asset.name);
+
+                    manifest.scripts[chunkName].urls = '/public/scripts/' + asset.name;
+                    manifest.scripts[chunkName].dest = pathing.normalize(config.output.path + '/' + asset.name);
                 });
 
-                resolve(manifest);
+                resolve();
             });
         } catch (err) {
             reject(err);
