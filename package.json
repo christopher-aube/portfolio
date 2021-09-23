@@ -5,7 +5,8 @@
   "main": "functions/index.js",
   "scripts": {
     "serve": "cd ./functions && firebase serve --only functions,hosting",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "build:site": "node build/site-config.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/christopher-aube/portfolio/issues"
   },
-  "homepage": "https://github.com/christopher-aube/portfolio#readme"
+  "homepage": "https://github.com/christopher-aube/portfolio#readme",
+  "dependencies": {
+    "beautify-html-webpack-plugin": "^1.0.3",
+    "colors": "^1.4.0",
+    "diff": "^5.0.0",
+    "fs-extra": "^10.0.0",
+    "handlebars": "^4.7.7",
+    "html-webpack-plugin": "^5.3.2",
+    "js-beautify": "^1.14.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "moment": "^2.29.1",
+    "sass": "^1.42.1",
+    "webpack": "^5.53.0"
+  }
 }
