@@ -93,6 +93,11 @@ exports.build = function build(manifest) {
             name: 'main',
             source: './site/styles/main.scss',
             dest: 'functions/public/styles/main.css'
+        },
+        home: {
+            name: 'home',
+            source: './site/styles/home.scss',
+            dest: 'functions/public/styles/home.css'
         }
     };
     
