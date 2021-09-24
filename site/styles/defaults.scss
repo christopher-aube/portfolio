@@ -3,6 +3,13 @@
 }
 
 html,
+body,
+section,
+div {
+    position: relative;
+}
+
+html,
 body {
     height: 100vh;
     width: 100vw;
@@ -25,6 +32,7 @@ body {
     font-size: $titleSize;
 
     &--sm {
+        font-family: $fontFamily-heading;
         font-size: $titleSize-sm;
     }
 }
@@ -65,12 +73,16 @@ h6 {
 .para {
     font-family: $fontFamily-para;
     font-size: $paraSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
 
     &--lg {
+        @extend .para;
         font-size: $paraSize-lg;
     }
 
     &--sm {
+        @extend .para;
         font-size: $paraSize-sm;
     }
 }

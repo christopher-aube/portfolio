@@ -2,6 +2,13 @@
   width: device-width;
 }
 html,
+body,
+section,
+div {
+  position: relative;
+}
+
+html,
 body {
   height: 100vh;
   width: 100vw;
@@ -16,7 +23,7 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .title {
@@ -24,7 +31,8 @@ body {
   font-size: 50rem;
 }
 .title--sm {
-  font-size: 12rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 11rem;
 }
 
 h1,
@@ -37,38 +45,40 @@ h6 {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 3.2rem;
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 h5 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h6 {
-  font-size: 1.4rem;
-}
-
-.para {
-  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }
+
+.para, .para--sm, .para--lg {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.05rem;
+}
 .para--lg {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .para--sm {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 section > .row {
@@ -84,7 +94,7 @@ section > .row {
     font-size: 25rem;
   }
   .title--sm {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -96,7 +106,7 @@ section > .row {
     font-size: 35rem;
   }
   .title--sm {
-    font-size: 8.4rem;
+    font-size: 7.7rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -108,7 +118,7 @@ section > .row {
     font-size: 22.5rem;
   }
   .title--sm {
-    font-size: 5.4rem;
+    font-size: 4.95rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -120,7 +130,7 @@ section > .row {
     font-size: 30rem;
   }
   .title--sm {
-    font-size: 7.2rem;
+    font-size: 6.6rem;
   }
 }
 @media only screen and (min-width: 1560px) {
@@ -132,6 +142,20 @@ section > .row {
     font-size: 50rem;
   }
   .title--sm {
-    font-size: 12rem;
+    font-size: 11rem;
   }
+}
+.callout, .callout--left, .callout--right {
+  position: absolute;
+  height: 100%;
+  width: 66.6666666667%;
+  top: 0px;
+}
+.callout--right {
+  right: -60px;
+  transform: skewX(-20deg);
+}
+.callout--left {
+  left: -60px;
+  transform: skewX(20deg);
 }

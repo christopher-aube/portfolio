@@ -4,8 +4,30 @@
     user-select: none;
 }
 
+#bio {
+    background-color: $color--dark;
+    overflow: hidden;
+    padding: 50px 0px;
+}
+
+#bio .para {
+    padding: ($spacer * 2);
+}
+
+#bio [class*="callout"] {
+    background-color: $color;
+}
+
+#bio .avatar {
+    border: 16px solid #63a4ff;
+    border-radius: 100%;
+    width: 28%;
+    position: relative;
+    left: 25%;
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
-    #opener {
+    #opener .row {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
@@ -24,7 +46,7 @@
 
 @media only screen and (max-width: $breakpoint-md) {
 
-    #opener {
+    #opener .row {
         padding: 0px 0px 80px;
     }
 
@@ -42,7 +64,7 @@
 
 @media only screen and (min-width: $breakpoint-md) {
     
-    #opener {
+    #opener .row {
         padding: 0px 0px 50px;
     }
     
@@ -53,7 +75,7 @@
 
 @media only screen and (min-width: $breakpoint-lg) {
     
-    #opener {
+    #opener .row {
         padding: 0px 0px 80px;
     }
 
@@ -64,7 +86,7 @@
 
 @media only screen and (min-width: $breakpoint-xl) {
     
-    #opener {
+    #opener .row {
         padding: 0px 0px 119px;
     }
 

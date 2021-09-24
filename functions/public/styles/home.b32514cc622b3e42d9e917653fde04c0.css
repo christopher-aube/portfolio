@@ -2,8 +2,30 @@
   user-select: none;
 }
 
+#bio {
+  background-color: #004ba0;
+  overflow: hidden;
+  padding: 50px 0px;
+}
+
+#bio .para {
+  padding: 1.6rem;
+}
+
+#bio [class*=callout] {
+  background-color: #1976d2;
+}
+
+#bio .avatar {
+  border: 16px solid #63a4ff;
+  border-radius: 100%;
+  width: 28%;
+  position: relative;
+  left: 25%;
+}
+
 @media only screen and (max-width: 600px) {
-  #opener {
+  #opener .row {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -20,7 +42,7 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  #opener {
+  #opener .row {
     padding: 0px 0px 80px;
   }
 
@@ -36,7 +58,7 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  #opener {
+  #opener .row {
     padding: 0px 0px 50px;
   }
 
@@ -45,7 +67,7 @@
   }
 }
 @media only screen and (min-width: 992px) {
-  #opener {
+  #opener .row {
     padding: 0px 0px 80px;
   }
 
@@ -54,7 +76,7 @@
   }
 }
 @media only screen and (min-width: 1560px) {
-  #opener {
+  #opener .row {
     padding: 0px 0px 119px;
   }
 
