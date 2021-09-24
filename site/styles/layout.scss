@@ -8,10 +8,10 @@ section > .row {
     }
 
     .title {
-        font-size: $titleSize * 0.70;
+        font-size: $titleSize * 0.50;
 
         &--sm {
-            font-size: $titleSize-sm * 0.70;
+            font-size: $titleSize-sm * 0.50;
         }
     }
 }

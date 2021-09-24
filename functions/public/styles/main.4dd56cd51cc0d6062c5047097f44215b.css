@@ -1,5 +1,10 @@
+@-ms-viewport {
+  width: device-width;
+}
 html,
 body {
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
 }
@@ -76,10 +81,10 @@ section > .row {
   }
 
   .title {
-    font-size: 35rem;
+    font-size: 25rem;
   }
   .title--sm {
-    font-size: 8.4rem;
+    font-size: 6rem;
   }
 }
 @media only screen and (min-width: 600px) {
