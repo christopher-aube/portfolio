@@ -39,7 +39,7 @@ exports.build = function build(manifest) {
                         manifest.scripts[chunkName] = {};
                     }
 
-                    manifest.scripts[chunkName].urls = '/public/scripts/' + asset.name;
+                    manifest.scripts[chunkName].url = '/public/scripts/' + asset.name;
                     manifest.scripts[chunkName].dest = pathing.normalize(config.output.path + '/' + asset.name);
                 });
 

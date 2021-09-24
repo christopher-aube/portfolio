@@ -45,27 +45,20 @@ function getPages() {
     return getViewContents(source);
 }
 
-exports.build = function () {
-    var partials = getPartials();
-    var pages = getPages();
-    var rendered = [];
-    var destBase = 'functions/public';
+exports.build = function (manifest) {
     var contents, filename, fileDest;
+    var destBase = 'functions/public';
+    var pages = getPages();
+    var config = {
+            styles: manifest.styles,
+            scripts: manifest.scripts,
+            partials: getPartials()
+        };
 
     for (page in pages) {
-        contents = exports.beautify(exports.render(pages[page], partials));
+        contents = exports.beautify(exports.render(pages[page], config));
         filename = page + '.html';
         fileDest = destBase + '/' + filename;
-
-        rendered.push({
-            name: page,
-            filename: filename,
-            dest: fileDest,
-            contents: contents
-        });
-        
         fs.outputFileSync(fileDest, contents);
     }
-
-    return rendered;
 };

@@ -4,9 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chris Aube | Portfolio</title>
+    {{{partials.externalStyles}}}
+    {{#if styles}}
+        <link href="{{{styles.main.url}}}" rel="stylesheet">
+    {{/if}}
+    {{#if scripts}}
+        <script src="{{{scripts.main.url}}}"></script>
+    {{/if}}
   </head>
   <body>
-    {{{nav}}}
+    {{{partials.nav}}}
     <main>
 
         <section>
