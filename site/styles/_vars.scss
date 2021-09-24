@@ -1,8 +1,37 @@
-$breakpoint-lg: 1200px;
-$breakpoint-md: 960px;
-$breakpoint-sm: 460px;
+$breakpoint-xl: 1560px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 600px;
+
+$fontFamily-title: 'Lato', sans-serif;
+$fontFamily-heading: 'Source Sans Pro', sans-serif;
+$fontFamily-para: 'Roboto', sans-serif;
 
 $fontSize: 10px;
+
+$titleSize: 50rem;
+$titleSize-sm: 12rem;
+
+$headingSize-1: 3.2rem;
+$headingSize-2: 2.6rem;
+$headingSize-3: 2.2rem;
+$headingSize-4: 1.8rem;
+$headingSize-5: 1.6rem;
+$headingSize-6: 1.4rem;
+
 $paraSize: 1.6rem;
 $paraSize-sm: 1rem;
 $paraSize-lg: 2rem;
+
+$spacer: 0.8rem;
+
+$color-reset: #ffffff;
+$color: #7986cb;
+$color--light: #aab6fe;
+$color--dark: #49599a;
+$color-alt: #8c9eff;
+$color-alt--light: #c0cfff;
+$color-alt--dark: #5870cb;
+
+$text-color: #000000;
+$text-color--dark: #ffffff;

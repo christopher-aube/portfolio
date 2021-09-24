@@ -1,0 +1,73 @@
+section > .row {
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+    section > .row {
+        width: 100%;
+    }
+
+    .title {
+        font-size: $titleSize * 0.70;
+
+        &--sm {
+            font-size: $titleSize-sm * 0.70;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+    section > .row {
+        width: 100%;
+    }
+
+    .title {
+        font-size: $titleSize * 0.70;
+
+        &--sm {
+            font-size: $titleSize-sm * 0.70;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+    section > .row {
+        width: $breakpoint-md;
+    }
+
+    .title {
+        font-size: $titleSize * 0.45;
+
+        &--sm {
+            font-size: $titleSize-sm * 0.45;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+    section > .row {
+        width: $breakpoint-lg;
+    }
+
+    .title {
+        font-size: $titleSize * 0.6;
+
+        &--sm {
+            font-size: $titleSize-sm * 0.6;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xl) {
+    section > .row {
+        width: $breakpoint-xl;
+    }
+
+    .title {
+        font-size: $titleSize;
+
+        &--sm {
+            font-size: $titleSize-sm;
+        }
+    }
+}
