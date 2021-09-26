@@ -1,0 +1,107 @@
+.tech-logo {
+    max-width: 30%;
+    height: 150px;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+#logo-javascript {
+    background-image: url('../assets/javascript.png');
+    background-size: 80%;
+}
+
+#logo-html-5 {
+    background-image: url('../assets/html-5.png');
+    background-size: 75%;
+}
+
+#logo-css-3 {
+    background-image: url('../assets/css-3.png');
+    background-size: 60%;
+}
+
+#logo-node-js {
+    background-image: url('../assets/node-js.png');
+}
+
+#logo-apps-script {
+    background-image: url('../assets/apps-script.png');
+}
+
+#logo-angular-js {
+    background-image: url('../assets/angular-js.png');
+}
+
+#logo-express-js {
+    background-image: url('../assets/express-js.png');
+}
+
+#logo-puppeteer {
+    background-image: url('../assets/puppeteer.png');
+    background-size: 65%;
+}
+
+#logo-webpack {
+    background-image: url('../assets/webpack.png');
+}
+
+#logo-sass {
+    background-image: url('../assets/sass.png');
+}
+
+#logo-vs-code {
+    background-image: url('../assets/visual-studio-code.png');
+    background-size: 75%;
+}
+
+#logo-github {
+    background-image: url('../assets/github.png');
+}
+
+#logo-firebase {
+    background-image: url('../assets/firebase.png');
+    background-size: 140%;
+}
+
+#logo-adobe-illustrator {
+    background-image: url('../assets/adobe-illustrator.png');
+    background-size: 75%;
+}
+
+#logo-adobe-xd {
+    background-image: url('../assets/adobe-xd.png');
+    background-size: 75%;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+    .tech-logo {
+        max-width: 30%;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+    .tech-logo {
+        max-width: 75%;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+    .tech-logo {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+    .tech-logo {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xl) {
+    .tech-logo {
+        max-width: 30%;
+    }
+}

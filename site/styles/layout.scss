@@ -1,4 +1,4 @@
-section > .row {
+section > .content {
     margin: 0 auto;
 }
 
@@ -7,8 +7,8 @@ section > .row {
         flex-basis: 100%;
         min-width: 100%;
     }
-    
-    section > .row {
+
+    section > .content {
         width: 100%;
     }
 
@@ -22,7 +22,7 @@ section > .row {
 }
 
 @media only screen and (min-width: $breakpoint-sm) {
-    section > .row {
+    section > .content {
         width: 100%;
     }
 
@@ -36,7 +36,7 @@ section > .row {
 }
 
 @media only screen and (min-width: $breakpoint-md) {
-    section > .row {
+    section > .content {
         width: $breakpoint-md;
     }
 
@@ -50,7 +50,7 @@ section > .row {
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
-    section > .row {
+    section > .content {
         width: $breakpoint-lg;
     }
 
@@ -64,7 +64,7 @@ section > .row {
 }
 
 @media only screen and (min-width: $breakpoint-xl) {
-    section > .row {
+    section > .content {
         width: $breakpoint-xl;
     }
 

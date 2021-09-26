@@ -1,3 +1,5 @@
+@import './vars';
+
 .callout {
     position: absolute;
     height: 100%;
@@ -6,13 +8,78 @@
 
     &--right {
         @extend .callout;
-        right: -60px;
+        right: -80px;
         transform: skewX(-20deg);
     }
 
     &--left {
         @extend .callout;
-        left: -60px;
+        left: -80px;
         transform: skewX(20deg);
     }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+    .callout {
+
+        &--right {
+            right: -60px;
+        }
+
+        &--left {
+            left: -60px;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+    .callout {
+
+        &--right {
+            right: -60px;
+        }
+
+        &--left {
+            left: -60px;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+    .callout {
+
+        &--right {
+            right: -60px;
+        }
+
+        &--left {
+            left: -60px;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+    .callout {
+
+        &--right {
+            right: -60px;
+        }
+
+        &--left {
+            left: -60px;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xl) {
+    .callout {
+
+        &--right {
+            right: -80px;
+        }
+
+        &--left {
+            left: -80px;
+        }
+    } 
 }
