@@ -81,11 +81,28 @@ h6 {
   font-size: 1.6rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .para, .para--lg, .para--sm {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .para--lg {
+    font-size: 4rem;
+  }
+  .para--sm {
+    font-size: 2.1333333333rem;
+  }
+}
 section > .row {
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 600px) {
+  [class*=col-xs] {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
+
   section > .row {
     width: 100%;
   }

@@ -21,27 +21,13 @@
 #bio .avatar {
     border: 16px solid #63a4ff;
     border-radius: 100%;
-    width: 28%;
+    width: 250px;
     position: relative;
-    left: 25%;
+    left: 20%;
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
-    #opener .row {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    #opener [class*="col-xs"] {
-        flex-basis: 100%;
-        min-width: 100%;
-    }
-
-    #opener .title--sm {
-        padding-bottom: 0px;
-    }
+.callout {
+    display: none;
 }
 
 @media only screen and (max-width: $breakpoint-md) {
@@ -60,6 +46,52 @@
         padding-left: 34px;
         padding-right: 34px;
     }
+
+    #bio .para {
+        padding: $spacer ($spacer * 5);
+    }
+
+    #bio .avatar {
+        width: 150px;
+        left: 15%;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+    .section > .callout--right {
+        display: none;
+    }
+
+    .callout {
+        display: initial;
+        width: 100%;
+        left: 0px;
+    }
+
+    .row {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #opener .title--sm {
+        padding-bottom: 0px;
+    }
+
+    #bio {
+        padding-bottom: 0px;
+    }
+
+    #bio .avatar {
+        width: 250px;
+        left: 0%;
+        margin-bottom: 50px;
+    }
+
+    #bio .para {
+        text-align: initial;
+    }
 }
 
 @media only screen and (min-width: $breakpoint-md) {
@@ -70,6 +102,15 @@
     
     #opener .title--sm {
         padding-bottom: 34px;
+    }
+
+    #bio .para {
+        padding: $spacer;
+    }
+
+    #bio .avatar {
+        width: 175px;
+        left: 0%;
     }
 }
 
@@ -82,6 +123,15 @@
     #opener .title--sm {
         padding-bottom: 44px;
     }
+
+    #bio .avatar {
+        width: 200px;
+        left: 0%;
+    }
+
+    #bio .para {
+        padding: ($spacer * 2);
+    }
 }
 
 @media only screen and (min-width: $breakpoint-xl) {
@@ -92,5 +142,14 @@
 
     #opener .title--sm {
         padding-bottom: 80px;
+    }
+
+    #bio .avatar {
+        width: 250px;
+        left: 20%;
+    }
+
+    #bio .para {
+        padding: ($spacer * 2);
     }
 }

@@ -86,3 +86,18 @@ h6 {
         font-size: $paraSize-sm;
     }
 }
+
+@media only screen and (max-width: $breakpoint-sm) {
+    .para {
+        font-size: ($paraSize * $mobileIncrease);
+        line-height: ($lineHeight * $mobileIncrease);
+
+        &--lg {
+            font-size: ($paraSize-lg * $mobileIncrease);
+        }
+    
+        &--sm {
+            font-size: ($paraSize-sm * $mobileIncrease);
+        }
+    }
+}
