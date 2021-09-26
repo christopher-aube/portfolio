@@ -354,3 +354,73 @@ section > .content {
     max-width: 30%;
   }
 }
+.avatar--music {
+  max-width: 75%;
+  height: 200px;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  border-radius: 100%;
+  margin-bottom: 2.4rem;
+}
+
+#avatar-lil-nas-x {
+  background-image: url("../assets/lil-nas-x.jpg");
+  background-size: 110%;
+}
+
+#avatar-selah-sue {
+  background-image: url("../assets/selah-sue.jpg");
+}
+
+#avatar-rac {
+  background-image: url("../assets/rac.jpg");
+  background-size: 162%;
+}
+
+#avatar-charli-xcx {
+  background-image: url("../assets/charli-xcx.jpg");
+}
+
+#avatar-quadeca {
+  background-image: url("../assets/quadeca.jpg");
+  background-size: 108%;
+}
+
+#avatar-the-kooks {
+  background-image: url("../assets/the-kooks.jpg");
+  background-size: 120%;
+}
+
+@media only screen and (max-width: 600px) {
+  .avatar--music {
+    max-width: 48%;
+    height: 235px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .avatar--music {
+    height: 102px;
+    max-width: 86%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .avatar--music {
+    height: 102px;
+    max-width: 80%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .avatar--music {
+    height: 120px;
+    max-width: 75%;
+  }
+}
+@media only screen and (min-width: 1560px) {
+  .avatar--music {
+    height: 200px;
+    max-width: 75%;
+  }
+}

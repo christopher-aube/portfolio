@@ -1,5 +1,13 @@
 @import './vars';
 
+.callout {
+    display: none;
+}
+
+.section:not(#opener) {
+    padding: 50px 0px;
+}
+
 #opener {
     user-select: none;
 }
@@ -7,7 +15,6 @@
 #bio {
     background-color: $color--dark;
     overflow: hidden;
-    padding: 50px 0px;
 }
 
 #bio .para {
@@ -26,8 +33,16 @@
     left: 20%;
 }
 
-.callout {
-    display: none;
+#tools-skills-and-apps.section {
+    padding-top: 0px;
+}
+
+#music {
+    background-color: $color-alt;
+}
+
+#music [class*="callout"] {
+    background-color: $color--light;
 }
 
 @media only screen and (max-width: $breakpoint-md) {

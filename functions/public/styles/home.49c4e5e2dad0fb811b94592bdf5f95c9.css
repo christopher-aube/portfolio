@@ -1,3 +1,11 @@
+.callout {
+  display: none;
+}
+
+.section:not(#opener) {
+  padding: 50px 0px;
+}
+
 #opener {
   user-select: none;
 }
@@ -5,7 +13,6 @@
 #bio {
   background-color: #004ba0;
   overflow: hidden;
-  padding: 50px 0px;
 }
 
 #bio .para {
@@ -24,8 +31,16 @@
   left: 20%;
 }
 
-.callout {
-  display: none;
+#tools-skills-and-apps.section {
+  padding-top: 0px;
+}
+
+#music {
+  background-color: #304ffe;
+}
+
+#music [class*=callout] {
+  background-color: #63a4ff;
 }
 
 @media only screen and (max-width: 768px) {
