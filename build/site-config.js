@@ -22,6 +22,7 @@ async function build() {
     await scriptEninge.build(manifest);
     viewEninge.build(manifest);
     fs.writeLocalFile(manifestPath, manifest);
+    fs.copySync('./site/assets', './functions/public/assets');
 }
 
 build();
