@@ -47,6 +47,20 @@
   background-color: #1976d2;
 }
 
+#thoughts .box {
+  padding: 1.6rem;
+}
+
+#thoughts h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+#thoughts h3 .material-icons {
+  margin-right: 0.8rem;
+}
+
 @media only screen and (max-width: 768px) {
   #opener .row {
     padding: 0px 0px 80px;

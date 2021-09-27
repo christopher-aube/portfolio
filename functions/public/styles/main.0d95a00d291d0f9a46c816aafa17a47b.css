@@ -64,19 +64,19 @@ h2 .subheading {
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h3 .subheading {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h4 .subheading {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 h5 {
@@ -116,6 +116,18 @@ h6 {
     font-size: 2.1333333333rem;
   }
 }
+h1 .material-icons,
+h2 .material-icons,
+h3 .material-icons,
+h4 .material-icons,
+h5 .material-icons,
+h6 .material-icons,
+.para .material-icons,
+.para--lg .material-icons,
+.para--sm .material-icons {
+  font-size: inherit;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

@@ -49,6 +49,20 @@
     background-color: $color;
 }
 
+#thoughts .box {
+    padding: ($spacer * 2);
+}
+
+#thoughts h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: ($spacer * 2);
+}
+
+#thoughts h3 .material-icons {
+    margin-right: $spacer;
+}
+
 @media only screen and (max-width: $breakpoint-md) {
 
     #opener .row {
