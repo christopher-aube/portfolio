@@ -108,7 +108,7 @@
     padding-bottom: 0px;
   }
 
-  #bio {
+  #bio.section {
     padding-bottom: 0px;
   }
 
@@ -118,7 +118,7 @@
     margin-bottom: 50px;
   }
 
-  #bio .para {
+  .para {
     text-align: initial;
   }
 }

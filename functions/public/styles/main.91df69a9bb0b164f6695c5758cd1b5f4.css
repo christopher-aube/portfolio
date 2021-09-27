@@ -87,6 +87,12 @@ h6 {
   font-size: 1.8rem;
 }
 
+.heading,
+.subheading {
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+}
+
 .subheading {
   color: rgba(0, 0, 0, 0.7);
 }
@@ -106,14 +112,14 @@ h6 {
 
 @media only screen and (max-width: 600px) {
   .para, .para--lg, .para--sm {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
+    font-size: 2.25rem;
+    line-height: 3rem;
   }
   .para--lg {
-    font-size: 4rem;
+    font-size: 3.75rem;
   }
   .para--sm {
-    font-size: 2.1333333333rem;
+    font-size: 2rem;
   }
 }
 h1 .material-icons,

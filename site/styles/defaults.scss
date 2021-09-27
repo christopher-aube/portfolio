@@ -89,6 +89,12 @@ h6 {
     font-size: $headingSize-6;
 }
 
+.heading,
+.subheading {
+    margin-left: ($spacer * 2);
+    margin-right: ($spacer * 2);
+}
+
 .subheading {
     color: transparentize($text-color, 0.3);
 }
