@@ -1,1 +1,0 @@
-(()=>{"use strict";const a=function(a,l){var t,n,r=(t=l.length,n=n||0,Math.floor(Math.random()*(t-n+1)+n));a.classList.add(l[r])};window.addEventListener("DOMContentLoaded",(function(){const l=document.querySelector("#gaming .parallax");a(l,["parallax--dragon-skyline","parallax--ravenloft","parallax--saltmarsh","parallax--tasha","parallax--travelling"])}))})();
