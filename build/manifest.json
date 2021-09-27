@@ -1,18 +1,18 @@
 {
     "styles": {
         "main": {
-            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\main.91df69a9bb0b164f6695c5758cd1b5f4.css",
-            "url": "/public/styles/main.91df69a9bb0b164f6695c5758cd1b5f4.css"
+            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\main.c587bf681082ba8a537752bcf941219a.css",
+            "url": "/public/styles/main.c587bf681082ba8a537752bcf941219a.css"
         },
         "home": {
-            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\home.fdcd4cf8d47d20ba04c7d8ddcc8ae356.css",
-            "url": "/public/styles/home.fdcd4cf8d47d20ba04c7d8ddcc8ae356.css"
+            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\home.3abad9a0af0c8d8eee5bfc852d76985f.css",
+            "url": "/public/styles/home.3abad9a0af0c8d8eee5bfc852d76985f.css"
         }
     },
     "scripts": {
         "main": {
-            "url": "/public/scripts/main.f612634d95bad8062966.js",
-            "dest": "P:\\personal\\portfolio\\functions\\public\\scripts\\main.f612634d95bad8062966.js"
+            "url": "/public/scripts/main.afba4c0ae6439fe0b2c2.js",
+            "dest": "P:\\personal\\portfolio\\functions\\public\\scripts\\main.afba4c0ae6439fe0b2c2.js"
         }
     }
 }

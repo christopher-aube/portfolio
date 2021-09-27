@@ -1,18 +1,14 @@
-import list from './utls/list';
+import parallax from './components/parallax';
 
-var numList = [
-    {
-        name: 'one',
-        value: 1
-    },
-    {
-        name: 'two',
-        value: 2
-    },
-    {
-        name: 'three',
-        value: 3
-    }
-];
-
-console.log('index of one: ', list.lookupIndex(numList, 'value', 1));
+window.addEventListener('DOMContentLoaded', function() {
+    const parallaxElem = document.querySelector('#gaming .parallax');
+    const imageList = [
+            'parallax--dragon-skyline',
+            'parallax--ravenloft',
+            'parallax--saltmarsh',
+            'parallax--tasha',
+            'parallax--travelling'
+        ];
+    
+    parallax.setBackground(parallaxElem, imageList);
+});

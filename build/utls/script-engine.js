@@ -18,7 +18,7 @@ exports.build = function build(manifest) {
     return new Promise(function (resolve, reject) {
 
         try {
-            let chunkName, newDest;
+            let chunkName;
             let compiler = webpack(config);
 
             if (!manifest.hasOwnProperty('scripts')) {

@@ -1,0 +1,169 @@
+.parallax {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rbga(0,0,0,0.6);
+
+    &--dragon-skyline {
+        @extend .parallax;
+        background-image: url(../assets/ttg/dnd-dragon-skyline.jpg);
+    }
+
+    &--ravenloft {
+        @extend .parallax;
+        background-image: url(../assets/ttg/dnd-ravenloft.jpg);
+    }
+
+    &--saltmarsh {
+        @extend .parallax;
+        background-image: url(../assets/ttg/dnd-saltmarsh.jpg);
+    }
+
+    &--tasha {
+        @extend .parallax;
+        background-image: url(../assets/ttg/dnd-tasha.jpg);
+    }
+
+    &--travelling {
+        @extend .parallax;
+        background-image: url(../assets/ttg/dnd-travelling.jpg);
+    }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+    .parallax {
+    
+        &--dragon-skyline {
+            background-size: 625%;
+        }
+    
+        &--ravenloft {
+            background-size: 576%;
+            background-position-x: 68%;
+        }
+    
+        &--saltmarsh {
+            background-position-x: 50%;
+            background-size: 340%;
+        }
+    
+        &--tasha {
+            background-size: 400%;
+            background-position-x: 75%;
+        }
+    
+        &--travelling {
+            background-size: 300%;
+            background-position-x: 82%;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+    .parallax {
+        &--dragon-skyline {
+            background-size: 470%;        
+        }
+    
+        &--ravenloft {
+            background-size: 444%;
+            background-position-x: 70%;
+        }
+    
+        &--saltmarsh {
+            background-position-x: 60%;
+            background-size: 300%;
+        }
+    
+        &--tasha {
+            background-size: 400%;
+            background-position-x: 75%;
+        }
+    
+        &--travelling {
+            background-size: 245%;
+            background-position-x: 90%;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+    .parallax {
+        &--dragon-skyline {
+            background-size: 330%;
+        }
+    
+        &--ravenloft {
+            background-size: 300%;
+            background-position-x: 70%;
+        }
+    
+        &--saltmarsh {
+            background-position-x: 66%;
+            background-size: 250%;
+        }
+    
+        &--tasha {
+            background-size: 250%;
+            background-position-x: 75%;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+    .parallax {
+        &--dragon-skyline {
+            background-size: 240%;
+        }
+    
+        &--ravenloft {
+            background-size: 220%;
+            background-position-x: 60%;
+        }
+    
+        &--saltmarsh {    
+            background-position-x: 70%;
+            background-size: 200%;
+        }
+    
+        &--tasha {
+            background-size: 200%;
+            background-position-x: 90%;
+        }
+    
+        &--travelling {
+            background-size: 160%;
+            background-position-x: 90%;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xl) {
+    .parallax {
+        &--dragon-skyline {
+            background-size: 140%;
+        }
+        
+        &--ravenloft {
+            background-size: 125%;
+            background-position-x: 90%;
+        }
+    
+        &--saltmarsh {
+            background-position-x: 60%;
+            background-size: 120%;
+        }
+    
+        &--tasha {
+            background-size: 128%;
+            background-position-x: 100%;
+        }
+    
+        &--travelling {
+            background-size: 110%;
+            background-position-x: 90%;
+        }
+    }
+}
