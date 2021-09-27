@@ -78,6 +78,20 @@
     background-size: 75%;
 }
 
+#logo-typescript {
+    background-image: url('../assets/typescript.svg');
+    background-size: 95%;
+}
+
+#logo-docker {
+    background-image: url('../assets/docker.png');
+}
+
+#logo-postgres {
+    background-image: url('../assets/postgres.png');
+    background-size: 95%;
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
     .tech-logo {
         max-width: 30%;
