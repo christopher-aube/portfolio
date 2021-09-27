@@ -43,6 +43,10 @@
   background-color: #63a4ff;
 }
 
+#reading {
+  background-color: #1976d2;
+}
+
 @media only screen and (max-width: 768px) {
   #opener .row {
     padding: 0px 0px 80px;

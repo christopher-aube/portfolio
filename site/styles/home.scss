@@ -45,6 +45,10 @@
     background-color: $color--light;
 }
 
+#reading {
+    background-color: $color;
+}
+
 @media only screen and (max-width: $breakpoint-md) {
 
     #opener .row {

@@ -1,12 +1,12 @@
 {
     "styles": {
         "main": {
-            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\main.b0b90b6c6096c3372049f5c93251bc06.css",
-            "url": "/public/styles/main.b0b90b6c6096c3372049f5c93251bc06.css"
+            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\main.e5958aacef72bf43fa4d32f31eed45e3.css",
+            "url": "/public/styles/main.e5958aacef72bf43fa4d32f31eed45e3.css"
         },
         "home": {
-            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\home.49c4e5e2dad0fb811b94592bdf5f95c9.css",
-            "url": "/public/styles/home.49c4e5e2dad0fb811b94592bdf5f95c9.css"
+            "dest": "P:\\personal\\portfolio\\functions\\public\\styles\\home.90496868a00577811b3e6c1a552a2810.css",
+            "url": "/public/styles/home.90496868a00577811b3e6c1a552a2810.css"
         }
     },
     "scripts": {
