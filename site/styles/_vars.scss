@@ -1,32 +1,34 @@
-$breakpoint-xl: 1560px;
-$breakpoint-lg: 992px;
-$breakpoint-md: 768px;
-$breakpoint-sm: 600px;
+$fontSize: 16px;
+
+$breakpoint-xs: 0rem;
+$breakpoint-sm: 30rem;
+$breakpoint-md: 48rem;
+$breakpoint-lg: 64rem;
+$breakpoint-xl: 75rem;
+$breakpoint-hd: 100rem;
 
 $fontFamily-title: 'Lato', sans-serif;
 $fontFamily-heading: 'Source Sans Pro', sans-serif;
 $fontFamily-para: 'Roboto', sans-serif;
 
-$fontSize: 10px;
-
 $titleSize: 50rem;
-$titleSize-sm: 11rem;
+$titleSize-sm: 12rem;
 
-$headingSize-1: 8rem;
-$headingSize-2: 6rem;
-$headingSize-3: 3.5rem;
-$headingSize-4: 2.5rem;
-$headingSize-5: 2rem;
-$headingSize-6: 1.8rem;
+$headingSize-1: 6rem;
+$headingSize-2: 4rem;
+$headingSize-3: 2.2rem;
+$headingSize-4: 2rem;
+$headingSize-5: 1.8rem;
+$headingSize-6: 1.6rem;
 $subheadingDecrease: 0.6;
 
-$paraSize: 1.8rem;
-$paraSize-sm: 1.6rem;
-$paraSize-lg: 3rem;
+$paraSize: 1.5rem;
+$paraSize-sm: 1rem;
+$paraSize-lg: 1.8rem;
 $mobileIncrease: 1.25;
 
-$spacer: 0.8rem;
-$lineHeight: 2.4rem;
+$spacer: 0.5rem;
+$lineHeight: 1.8rem;
 $letterSpacing: 0.05rem;
 
 $color-reset: #ffffff;

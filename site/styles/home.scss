@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import './vars';
 
 .callout {
@@ -63,53 +64,43 @@
     margin-right: $spacer;
 }
 
-@media only screen and (max-width: $breakpoint-md) {
+@media only screen and (min-width: $breakpoint-xs) {
+    .title--sm {
+        padding-bottom: 0px;
+    }
 
     #opener .row {
-        padding: 0px 0px 80px;
-    }
-
-    #opener [class*="col-xs"] {
-        flex-basis: 100%;
-        min-width: 100%;
-    }
-
-    #opener .title--sm {
-        padding-bottom: 0px;
-        padding-left: 34px;
-        padding-right: 34px;
-    }
-
-    #bio .para {
-        padding: $spacer ($spacer * 5);
-    }
-
-    #bio .avatar {
-        width: 150px;
-        left: 15%;
-    }
-}
-
-@media only screen and (max-width: $breakpoint-sm) {
-    .section > .callout--right {
-        display: none;
+        padding-bottom: 100px;
     }
 
     .callout {
         display: initial;
-        width: 100%;
-        left: 0px;
-    }
+        width: $breakpoint-sm;
+        left: math.div($breakpoint-sm - $breakpoint-xs, 2) * -1;
 
-    .row {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        text-align: center;
+        &--right {
+            display: none;
+        }
     }
+}
 
-    #opener .title--sm {
+@media only screen and (min-width: $breakpoint-sm) {
+    .title--sm {
         padding-bottom: 0px;
+    }
+
+    #opener .row {
+        padding-bottom: 100px;
+    }
+
+    .callout {
+        display: initial;
+        width: $breakpoint-md;
+        left: math.div($breakpoint-md - $breakpoint-sm, 2) * -1;
+
+        &--right {
+            display: none;
+        }
     }
 
     #bio.section {
@@ -128,13 +119,22 @@
 }
 
 @media only screen and (min-width: $breakpoint-md) {
-    
-    #opener .row {
-        padding: 0px 0px 50px;
+    .title--sm {
+        padding-bottom: 0px;
     }
-    
-    #opener .title--sm {
-        padding-bottom: 34px;
+
+    #opener .row {
+        padding-bottom: 150px;
+    }
+
+    .callout {
+        display: initial;
+        width: $breakpoint-lg;
+        left: math.div($breakpoint-lg - $breakpoint-md, 2) * -1;
+
+        &--right {
+            display: none;
+        }
     }
 
     #bio .para {
@@ -142,19 +142,26 @@
     }
 
     #bio .avatar {
-        width: 175px;
+        width: 250px;
         left: 0%;
     }
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
-    
-    #opener .row {
-        padding: 0px 0px 80px;
+    .title--sm {
+        padding-bottom: 56px;
     }
 
-    #opener .title--sm {
-        padding-bottom: 44px;
+    #opener .row {
+        padding-bottom: 200px;
+    }
+
+    .callout {
+        display: none;
+
+        &--right {
+            display: block;
+        }
     }
 
     #bio .avatar {
@@ -168,21 +175,46 @@
 }
 
 @media only screen and (min-width: $breakpoint-xl) {
-    
-    #opener .row {
-        padding: 0px 0px 119px;
+    .title--sm {
+        padding-bottom: 60px;
     }
 
-    #opener .title--sm {
-        padding-bottom: 80px;
+    #opener .row {
+        padding-bottom: 100px;
+    }
+
+    .callout {
+        display: none;
+
+        &--right {
+            display: block;
+        }
     }
 
     #bio .avatar {
         width: 250px;
-        left: 20%;
+        left: -12%;
     }
 
     #bio .para {
         padding: ($spacer * 2);
+    }
+}
+
+@media only screen and (min-width: $breakpoint-hd) {
+    .title--sm {
+        padding-bottom: 80px;
+    }
+
+    #opener .row {
+        padding-bottom: 150px;
+    }
+
+    .callout {
+        display: none;
+
+        &--right {
+            display: block;
+        }
     }
 }

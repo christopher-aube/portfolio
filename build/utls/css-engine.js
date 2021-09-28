@@ -1,25 +1,8 @@
 const sass = require('sass');
-const diff = require('diff');
 const md5 = require('md5');
 const pathing = require('path');
 const fs = require('./file-system');
 const { print } = require('./messager');
-
-function hasChanged(data, file) {
-    var oldFile = fs.readFileSync(data.destOld, 'utf8');
-    var changes = diff.diffCss(oldFile, file);
-    var updated = false;
-    
-    for (var i = 0, ii = changes.length; i < ii; i++) {
-
-        if (changes[i].added || changes[i].removed) {
-            updated = true;
-            break;
-        }
-    }
-    
-    return updated;
-}
 
 function compile(data, manifest) {
     var res, file;
@@ -51,25 +34,13 @@ function compile(data, manifest) {
     }
 
     try {
-        print('updating file: ' + data.dest);
-        var hasOld = data.hasOwnProperty('destOld');
-        var updated = hasOld ? hasChanged(data, file) : true;
+        print('writting changes to file: ' + data.dest);
+        fs.outputFileSync(data.dest, file);
 
-        if (updated) {
-            print('writting changes to file: ' + data.dest);
-            fs.outputFileSync(data.dest, file);
-
-            if (hasOld) {
-                fs.removeSync(data.destOld);
-            }
-
-            manifest.styles[data.name] = {
-                dest: data.dest,
-                url: '/public/styles/' + pathing.parse(data.dest).base
-            };
-        } else {
-            print('no changes detected for: ' + data.dest);
-        }
+        manifest.styles[data.name] = {
+            dest: data.dest,
+            url: '/public/styles/' + pathing.parse(data.dest).base
+        };
     } catch (err) {
         print('failed to update file: \n' + err.stack);
         return false;
@@ -108,6 +79,8 @@ exports.build = function build(manifest) {
     try {
         let file;
         let files = [];
+
+        fs.removeSync('./functions/public/styles');
 
         for (style in stylesPaths) {
             stylesPaths[style].dest = stylesPaths[style].dest.replace(style, style + '.' + md5(stylesPaths[style].dest + '-' + new Date().valueOf()));

@@ -1,7 +1,11 @@
+// options
 @import './vars';
+// globals
 @import './defaults.scss';
-@import './accessibility.scss';
 @import './layout.scss';
-@import './callout.scss';
+@import './typography.scss';
+@import './accessibility.scss';
+// parts
 @import './images.scss';
+@import './callout.scss';
 @import './parallax.scss';

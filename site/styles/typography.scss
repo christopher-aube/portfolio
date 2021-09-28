@@ -1,0 +1,155 @@
+.title {
+    font-family: $fontFamily-title;
+    font-size: $titleSize;
+
+    &--sm {
+        font-family: $fontFamily-heading;
+        font-size: $titleSize-sm;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontFamily-heading;
+}
+
+h1 {
+    font-size: $headingSize-1;
+}
+
+h1 .subheading {
+    font-size: ($headingSize-1 * $subheadingDecrease);
+}
+
+h2 {
+    font-size: $headingSize-2;
+}
+
+h2 .subheading {
+    font-size: ($headingSize-2 * $subheadingDecrease);
+}
+
+h3 {
+    font-size: $headingSize-3;
+}
+
+h3 .subheading {
+    font-size: ($headingSize-3 * $subheadingDecrease);
+}
+
+h4 {
+    font-size: $headingSize-4;
+}
+
+h4 .subheading {
+    font-size: ($headingSize-4 * $subheadingDecrease);
+}
+
+h5 {
+    font-size: $headingSize-5;
+}
+
+h6 {
+    font-size: $headingSize-6;
+}
+
+.heading,
+.subheading {
+    margin-left: ($spacer * 2);
+    margin-right: ($spacer * 2);
+}
+
+.subheading {
+    color: transparentize($text-color, 0.3);
+}
+
+.para {
+    font-family: $fontFamily-para;
+    font-size: $paraSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+
+    &--lg {
+        @extend .para;
+        font-size: $paraSize-lg;
+    }
+
+    &--sm {
+        @extend .para;
+        font-size: $paraSize-sm;
+    }
+}
+
+h1 .material-icons,
+h2 .material-icons,
+h3 .material-icons,
+h4 .material-icons,
+h5 .material-icons,
+h6 .material-icons,
+.para .material-icons {
+    font-size: inherit;
+}
+
+@media only screen and (min-width: $breakpoint-xs) {
+    .title {
+        font-size: (($titleSize * 0.5) - 1);
+
+        &--sm {
+            font-size: (($titleSize-sm * 0.5) - 1);
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+    .title {
+        font-size: (($titleSize * 0.5) - 1);
+
+        &--sm {
+            font-size: (($titleSize-sm * 0.5) - 1);
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+    .title {
+        font-size: $titleSize * 0.45;
+
+        &--sm {
+            font-size: $titleSize-sm * 0.45;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+    .title {
+        font-size: $titleSize * 0.44;
+
+        &--sm {
+            font-size: ($titleSize-sm * (1/3));
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xl) {
+    .title {
+        font-size: (($titleSize * 0.5) - 1);
+
+        &--sm {
+            font-size: $titleSize-sm * 0.46;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-hd) {
+    .title {
+        font-size: $titleSize * 0.68;
+
+        &--sm {
+            font-size: $titleSize-sm * 0.625;
+        }
+    }
+}

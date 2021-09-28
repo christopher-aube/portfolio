@@ -11,23 +11,13 @@
         right: -80px;
         transform: skewX(-20deg);
     }
-
-    &--left {
-        @extend .callout;
-        left: -80px;
-        transform: skewX(20deg);
-    }
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
+@media only screen and (min-width: $breakpoint-xs) {
     .callout {
 
         &--right {
             right: -60px;
-        }
-
-        &--left {
-            left: -60px;
         }
     }
 }
@@ -38,9 +28,14 @@
         &--right {
             right: -60px;
         }
+    }
+}
 
-        &--left {
-            left: -60px;
+@media only screen and (min-width: $breakpoint-sm) {
+    .callout {
+
+        &--right {
+            right: -60px;
         }
     }
 }
@@ -49,37 +44,20 @@
     .callout {
 
         &--right {
-            right: -60px;
-        }
-
-        &--left {
-            left: -60px;
+            right: -17%;
+            width: 80%;
         }
     }
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
-    .callout {
-
-        &--right {
-            right: -60px;
-        }
-
-        &--left {
-            left: -60px;
-        }
-    }
+    
 }
 
 @media only screen and (min-width: $breakpoint-xl) {
-    .callout {
+    
+}
 
-        &--right {
-            right: -80px;
-        }
-
-        &--left {
-            left: -80px;
-        }
-    } 
+@media only screen and (min-width: $breakpoint-hd) {
+    
 }

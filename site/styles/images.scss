@@ -92,33 +92,45 @@
     background-size: 85%;
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
+@media only screen and (max-width: $breakpoint-xs) {
     .tech-logo {
-        max-width: 30%;
+        height: 204px;
+        max-width: 50%;
     }
 }
 
 @media only screen and (min-width: $breakpoint-sm) {
     .tech-logo {
-        max-width: 75%;
+        height: 204px;
+        max-width: 50%;
     }
 }
 
 @media only screen and (min-width: $breakpoint-md) {
     .tech-logo {
-        max-width: 60%;
+        height: 204px;
+        max-width: 30%;
     }
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
     .tech-logo {
-        max-width: 50%;
+        max-width: 30%;
+        height: 150px;
     }
 }
 
 @media only screen and (min-width: $breakpoint-xl) {
     .tech-logo {
         max-width: 30%;
+        height: 150px;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-hd) {
+    .tech-logo {
+        max-width: 30%;
+        height: 150px;
     }
 }
 
@@ -162,7 +174,7 @@
     background-size: 120%;
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
+@media only screen and (max-width: $breakpoint-xs) {
     .avatar--music {
         max-width: 48%;
         height: 235px;
@@ -171,29 +183,36 @@
 
 @media only screen and (min-width: $breakpoint-sm) {
     .avatar--music {
-        height: 102px;
+        height: 200px;
         max-width: 86%;
     }
 }
 
 @media only screen and (min-width: $breakpoint-md) {
     .avatar--music {
-        height: 102px;
+        height: 200px;
         max-width: 80%;
     }
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
     .avatar--music {
-        height: 120px;
-        max-width: 75%;
+        height: 155px;
+        max-width: 95%;
     }
 }
 
 @media only screen and (min-width: $breakpoint-xl) {
     .avatar--music {
         height: 200px;
-        max-width: 75%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-hd) {
+    .avatar--music {
+        height: 225px;
+        max-width: 90%;
     }
 }
 
@@ -223,24 +242,24 @@
     background-image: url('../assets/sweet-tooth.jpg');
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
+@media only screen and (min-width: $breakpoint-xs) {
     .avatar--book {
-        max-width: 65%;
-        height: 450px;
+        max-width: 62%;
+        height: 400px;
     }
 }
 
 @media only screen and (min-width: $breakpoint-sm) {
     .avatar--book {
-        max-width: 95%;
-        height: 310px;
+        max-width: 62%;
+        height: 400px;
     }
 }
 
 @media only screen and (min-width: $breakpoint-md) {
     .avatar--book {
-        max-width: 91%;
-        height: 330px;
+        max-width: 30%;
+        height: 320px;
     }
 }
 
@@ -252,6 +271,13 @@
 }
 
 @media only screen and (min-width: $breakpoint-xl) {
+    .avatar--book {
+        max-width: 82%;
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-hd) {
     .avatar--book {
         max-width: 60%;
         height: 450px;
