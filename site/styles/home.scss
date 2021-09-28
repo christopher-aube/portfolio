@@ -218,3 +218,20 @@
         }
     }
 }
+
+@media only screen and (max-width: $breakpoint-mob) {
+    #bio .avatar {
+        margin-bottom: 3rem;
+        left: 0;
+    }
+
+    .callout {
+        display: initial;
+        width: $breakpoint-sm;
+        left: math.div($breakpoint-sm - $breakpoint-mob, 2) * -1;
+    }
+
+    #bio.section {
+        padding-bottom: 0;
+    }
+}

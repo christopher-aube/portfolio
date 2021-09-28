@@ -6,6 +6,7 @@ $breakpoint-md: 48rem;
 $breakpoint-lg: 64rem;
 $breakpoint-xl: 75rem;
 $breakpoint-hd: 100rem;
+$breakpoint-mob: 26.25rem;
 
 $fontFamily-title: 'Lato', sans-serif;
 $fontFamily-heading: 'Source Sans Pro', sans-serif;
@@ -25,7 +26,7 @@ $subheadingDecrease: 0.6;
 $paraSize: 1.5rem;
 $paraSize-sm: 1rem;
 $paraSize-lg: 1.8rem;
-$mobileIncrease: 1.25;
+$mobileAdjustment: 0.65;
 
 $spacer: 0.5rem;
 $lineHeight: 1.8rem;

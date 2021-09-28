@@ -216,6 +216,13 @@
     }
 }
 
+@media only screen and (max-width: $breakpoint-mob) {
+    .avatar--music {
+        max-width: 56%;
+        height: 200px;
+    }
+}
+
 .avatar--book {
     max-width: 60%;
     height: 450px;
@@ -281,5 +288,12 @@
     .avatar--book {
         max-width: 60%;
         height: 450px;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mob) {
+    .avatar--book {
+        max-width: 80%;
+        height: 400px;
     }
 }

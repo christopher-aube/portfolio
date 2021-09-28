@@ -153,3 +153,29 @@ h6 .material-icons,
         }
     }
 }
+
+@media only screen and (max-width: $breakpoint-mob) {
+    .title {
+        font-size: $titleSize * 0.36;
+
+        &--sm {
+            font-size: $titleSize-sm * (1/3);
+        }
+    }
+
+    .para {
+        font-size: $paraSize * $mobileAdjustment;
+    }
+
+    h2 {
+        font-size: $headingSize-2 * $mobileAdjustment;
+    }
+
+    h2 .subheading {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: $headingSize-3 * $mobileAdjustment;
+    }
+}
