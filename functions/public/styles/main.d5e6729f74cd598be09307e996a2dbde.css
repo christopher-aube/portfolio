@@ -1281,7 +1281,7 @@ h6 {
 }
 
 .subheading {
-  color: rgba(0, 0, 0, 0.7);
+  opacity: 0.6;
 }
 
 .para, .para--block {
@@ -1451,6 +1451,12 @@ h6 .material-icons,
 
 #logo-github {
   background-image: url("../assets/github.png");
+  background-size: 88%;
+}
+
+#logo-github--white {
+  background-image: url("../assets/github--white.png");
+  background-size: 88%;
 }
 
 #logo-firebase {
@@ -1480,6 +1486,11 @@ h6 .material-icons,
 #logo-postgres {
   background-image: url("../assets/postgres.png");
   background-size: 85%;
+}
+
+#logo-linkedin--white {
+  background-image: url("../assets/linkedin--white.png");
+  background-size: 84%;
 }
 
 @media only screen and (max-width: 0rem) {
@@ -1516,6 +1527,14 @@ h6 .material-icons,
   .tech-logo {
     max-width: 30%;
     height: 150px;
+  }
+
+  #logo-github--white {
+    background-size: 58%;
+  }
+
+  #logo-linkedin--white {
+    background-size: 60%;
   }
 }
 .avatar--music {

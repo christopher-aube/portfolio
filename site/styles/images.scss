@@ -61,6 +61,12 @@
 
 #logo-github {
     background-image: url('../assets/github.png');
+    background-size: 88%;
+}
+
+#logo-github--white {
+    background-image: url('../assets/github--white.png');
+    background-size: 88%;
 }
 
 #logo-firebase {
@@ -90,6 +96,11 @@
 #logo-postgres {
     background-image: url('../assets/postgres.png');
     background-size: 85%;
+}
+
+#logo-linkedin--white {
+    background-image: url('../assets/linkedin--white.png');
+    background-size: 84%;
 }
 
 @media only screen and (max-width: $breakpoint-xs) {
@@ -131,6 +142,14 @@
     .tech-logo {
         max-width: 30%;
         height: 150px;
+    }
+
+    #logo-github--white {
+        background-size: 58%;
+    }
+
+    #logo-linkedin--white {
+        background-size: 60%;
     }
 }
 

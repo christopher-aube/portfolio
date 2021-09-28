@@ -64,6 +64,15 @@
     margin-right: $spacer;
 }
 
+#social {
+    background-color: $color-alt--dark;
+    color: $text-color--dark;
+}
+
+.social-link {
+    margin: 0 10%;
+}
+
 @media only screen and (min-width: $breakpoint-xs) {
     .title--sm {
         padding-bottom: 0px;

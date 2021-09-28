@@ -61,6 +61,15 @@
   margin-right: 0.5rem;
 }
 
+#social {
+  background-color: #0026ca;
+  color: #ffffff;
+}
+
+.social-link {
+  margin: 0 10%;
+}
+
 @media only screen and (min-width: 0rem) {
   .title--sm {
     padding-bottom: 0px;
