@@ -1251,6 +1251,7 @@ h2 .subheading {
 
 h3 {
   font-size: 2.2rem;
+  margin: 0 1rem 1rem;
 }
 
 h3 .subheading {
@@ -1283,17 +1284,16 @@ h6 {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.para, .para--sm, .para--lg {
+.para, .para--block {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   line-height: 1.8rem;
   letter-spacing: 0.05rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-.para--lg {
-  font-size: 1.8rem;
-}
-.para--sm {
-  font-size: 1rem;
+.para--block {
+  line-height: 2.5rem;
 }
 
 h1 .material-icons,
@@ -1303,8 +1303,7 @@ h4 .material-icons,
 h5 .material-icons,
 h6 .material-icons,
 .para .material-icons,
-.para--lg .material-icons,
-.para--sm .material-icons {
+.para--block .material-icons {
   font-size: inherit;
 }
 
@@ -1364,7 +1363,7 @@ h6 .material-icons,
     font-size: 4rem;
   }
 
-  .para, .para--lg, .para--sm {
+  .para, .para--block {
     font-size: 0.975rem;
   }
 

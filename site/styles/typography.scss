@@ -35,6 +35,7 @@ h2 .subheading {
 
 h3 {
     font-size: $headingSize-3;
+    margin: 0 1rem 1rem;
 }
 
 h3 .subheading {
@@ -72,15 +73,12 @@ h6 {
     font-size: $paraSize;
     line-height: $lineHeight;
     letter-spacing: $letterSpacing;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
-    &--lg {
+    &--block {
         @extend .para;
-        font-size: $paraSize-lg;
-    }
-
-    &--sm {
-        @extend .para;
-        font-size: $paraSize-sm;
+        line-height: $paraSize + 1;
     }
 }
 
